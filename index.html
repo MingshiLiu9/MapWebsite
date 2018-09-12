@@ -16,13 +16,13 @@
 
 <div id='map'></div>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoic21sa2wyMDA5IiwiYSI6ImNqa2tmam5qNjA2cm4zcHBsano5NjJ2dzMifQ.WBCQC2uM65h1RkiUdbQU4A';
+mapboxgl.accessToken = 'pk.eyJ1Ijoic21sa2wyMDA5IiwiYSI6ImNqbHhkMTExbjFld2kzcG9nMTU3MTYwYzQifQ.XpIkpTsFAbx7I53SHXhNRA';
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/dark-v9', // stylesheet location
     center: [151.004105, -33.813002], // starting position [lng, lat]
-    pitch:45,
-    bearing: -17.6
+    pitch: 45,
+    bearing: -17.6,
     zoom: 9 // starting zoom
 });
 map.on('load', function() {
@@ -39,12 +39,12 @@ map.on('load', function() {
                     'property': 'M',
                     "stops":[
                         [0, 'white'],
-                        [50, 'orange']
+                        [1, 'orange']
                     ]
-                    
+
                 },
                 'fill-extrusion-height' : {
-                    'property': 'M',
+                    'property': 'F',
                     "stops":[
                         [0.2, 0],
                         [1, 50000]
@@ -52,7 +52,7 @@ map.on('load', function() {
                 },
                  'fill-extrusion-opacity': 1
             }
-        });
+    });
 });
 </script>
 
